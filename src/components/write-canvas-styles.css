@@ -1,0 +1,116 @@
+/* Tiptap editor styles for WriteCanvas */
+.write-canvas-editor .tiptap {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #FFFFFF;
+  caret-color: hsl(var(--primary));
+}
+
+.write-canvas-editor .tiptap p {
+  margin-bottom: 0.75em;
+}
+
+.write-canvas-editor .tiptap h1 {
+  font-size: 1.75em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+.write-canvas-editor .tiptap h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+.write-canvas-editor .tiptap h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.write-canvas-editor .tiptap ul,
+.write-canvas-editor .tiptap ol {
+  padding-left: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+.write-canvas-editor .tiptap ul li {
+  list-style-type: disc;
+}
+
+.write-canvas-editor .tiptap ol li {
+  list-style-type: decimal;
+}
+
+.write-canvas-editor .tiptap li {
+  margin-bottom: 0.25em;
+}
+
+.write-canvas-editor .tiptap mark {
+  background-color: hsl(var(--primary) / 0.25);
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.write-canvas-editor .tiptap a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.write-canvas-editor .tiptap blockquote {
+  border-left: 3px solid rgba(255,255,255,0.15);
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 0.75em;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+.write-canvas-editor .tiptap code {
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+}
+
+.write-canvas-editor .tiptap pre {
+  background: rgba(255,255,255,0.06);
+  border-radius: 8px;
+  padding: 1em;
+  margin-bottom: 0.75em;
+  overflow-x: auto;
+}
+
+.write-canvas-editor .tiptap pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Placeholder */
+.write-canvas-editor .tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: rgba(156, 163, 175, 0.4);
+  pointer-events: none;
+  height: 0;
+}
+
+/* Selection */
+.write-canvas-editor .tiptap ::selection {
+  background: hsl(var(--primary) / 0.2);
+}
+
+/* ── Liquid Glass Animations ── */
+@keyframes glass-reflection {
+  0% { background-position: -50% 0; }
+  100% { background-position: 250% 0; }
+}
+
+@keyframes shimmer {
+  0%, 100% { background-position: 200% 0; }
+  50% { background-position: -200% 0; }
+}
